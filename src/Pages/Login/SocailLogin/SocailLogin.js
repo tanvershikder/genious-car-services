@@ -13,15 +13,15 @@ const SocailLogin = () => {
     const navigate = useNavigate();
     let erroMassage;
 
-    if(googleLoading || githubLoading){
+    if (googleLoading || githubLoading) {
         return <Loading></Loading>
     }
 
     if (GoogleError || githubError) {
-        erroMassage =  <p className='text-danger'>Error: {GoogleError?.message} {githubError?.message}</p>
+        erroMassage = <p className='text-danger'>Error: {GoogleError?.message} {githubError?.message}</p>
     }
 
-    if(googleUser || githuUuser){
+    if (googleUser || githuUuser) {
         navigate('/home')
     }
 
@@ -35,17 +35,17 @@ const SocailLogin = () => {
                     <div style={{ height: '1px' }} className="bg-primary w-25"></div>
                 </div>
                 {erroMassage}
-                <button  onClick={() => signInWithGoogle()} className='from-google my-2' type="submit">
+                <button onClick={() => signInWithGoogle()} className='from-google my-2' type="submit">
                     <div className='img-google'>
                         <span><small><img src={google} alt="" /></small> Sign Up with Google</span>
                     </div>
                 </button>
-                <button  className='from-google my-2' type="submit">
+                <button className='from-google my-2' type="submit">
                     <div className='img-google'>
                         <span><small><img style={{ width: "30px" }} src={facebook} alt="" /></small> Sign Up with FaceBook</span>
                     </div>
                 </button>
-                <button onClick={()=>signInWithGithub()} className='from-google my-2' type="submit">
+                <button onClick={() => signInWithGithub()} className='from-google my-2' type="submit">
                     <div className='img-google'>
                         <span><small><img src={github} alt="" /></small> Sign Up with Github</span>
                     </div>

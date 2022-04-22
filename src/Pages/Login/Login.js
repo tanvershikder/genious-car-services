@@ -9,6 +9,7 @@ import SocailLogin from './SocailLogin/SocailLogin';
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Title from '../Shared/TitleChaged/Title';
 
 
 const Login = () => {
@@ -66,6 +67,7 @@ const Login = () => {
 
     return (
         <div className='from-container'>
+            <Title title={"logIn"}></Title>
             <form onSubmit={logInUser}>
                 <div>
                     <h3 className='from-title text-primary '>Login</h3>

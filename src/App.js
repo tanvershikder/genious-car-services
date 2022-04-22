@@ -11,6 +11,8 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import Chackout from './Pages/ChackOut/Chackout/Chackout';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import Banner from './Pages/Home/Banner/Banner';
+import Services from './Pages/Home/Services/Services';
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/banner' element={<Banner></Banner>}></Route>
         <Route path='/service/:serviceId' element={<ServiceDetails></ServiceDetails>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
